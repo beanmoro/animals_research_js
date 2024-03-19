@@ -1,5 +1,3 @@
-import { playSound } from "./utils.module.js";
-
 const infoModal = document.querySelector('#exampleModal');
 
 export const createCard = (animal) => {
@@ -10,7 +8,6 @@ export const createCard = (animal) => {
     const cardDiv = document.createElement('div');
     cardDiv.className = 'card'
     cardDiv.style.width = '150px';
-
 
     const modalButton = document.createElement('button');
     modalButton.setAttribute('data-bs-toggle', 'modal');
@@ -35,8 +32,6 @@ export const createCard = (animal) => {
     audioIcon.style.width = "16px";
 
     audioButton.appendChild(audioIcon);
-
-    let soundFunc = null;
 
     switch(animal.name.toLowerCase()){
         case 'leon':
